@@ -1,0 +1,8 @@
+{
+  "name": "flow-it-night",
+  "version": "1.0.0",
+  "description": "Demo part of the talk about Flow (https://events.epam.com/events/nightit/talks/4493)",
+  "repository": "git@github.com:AlexanderShushunov/flow-it-night.git",
+  "author": "Alexander Shushunov <ashushunov@mail.ru>",
+  "license": "MIT"
+}
