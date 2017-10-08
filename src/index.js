@@ -3,6 +3,6 @@ function inc(value) {
     return value + 1;
 }
 
-const result = inc(1);
-console.log(result);
-
+let result = inc(1);
+result = inc('1');
+console.log(result.length);
