@@ -4,5 +4,8 @@
   "description": "Demo part of the talk about Flow (https://events.epam.com/events/nightit/talks/4493)",
   "repository": "git@github.com:AlexanderShushunov/flow-it-night.git",
   "author": "Alexander Shushunov <ashushunov@mail.ru>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "flow-bin": "^0.56.0"
+  }
 }
