@@ -6,6 +6,11 @@
   "author": "Alexander Shushunov <ashushunov@mail.ru>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.56.0"
+  },
+  "scripts": {
+    "build": "babel src/ -d dist/"
   }
 }
