@@ -1,0 +1,11 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+}
+
+.layout__field-container {
+    margin: 50px;
+}
