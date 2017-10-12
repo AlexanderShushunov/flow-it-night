@@ -28,7 +28,7 @@ export const TicTacToe = {
         if (areAllCellsSelected(newField)) {
             return {
                 field: newField,
-                result: 'draw'
+                result: 'drown'
             };
         }
         return {
@@ -45,7 +45,7 @@ export const isNormalCell = ({winLine}) => {
 };
 
 function toss() {
-    return Math.random() > 0.5 ? 'X' : 'O';
+    return Math.random > 0.5 ? 'Х' : 'O';
 }
 
 function possibleSelection({field}, row, column) {

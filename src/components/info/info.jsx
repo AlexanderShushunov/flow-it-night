@@ -12,7 +12,7 @@ function formatState(snapshot) {
         case 'draw':
             return 'Ничья';
         case 'win':
-            return formatWinner(snapshot.winner);
+            return formatWinner(snapshot.win);
         default:
             return `Ход ${snapshot.player}`;
     }

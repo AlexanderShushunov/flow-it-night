@@ -13,7 +13,7 @@ export const Layout =
          canReset
      }) => (
         <div className="layout">
-            <ResetButton onClick={onResetClick} disabled={!canReset}/>
+            <ResetButton onClick={onResetClick} disable={!canReset}/>
             <div className="layout__field-container">
                 <Board
                     field={snapshot.field}

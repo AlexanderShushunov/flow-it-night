@@ -18,7 +18,7 @@ export class Controller extends React.Component {
         snapshot: TicTacToe.initial
     });
 
-    isWinCell = (row, column) => !isNormalCell(this.state.snapshot)(row, column);
+    isWinCell = (row, column) => !isNormalCell(row, column);
 
     render() {
         return (<Layout
