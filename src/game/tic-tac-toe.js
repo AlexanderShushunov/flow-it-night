@@ -1,8 +1,13 @@
+// @flow
 import {some, cloneDeep, times, constant, flatten} from 'lodash';
 import {tryToFindWinLine} from './try-to-find-win-line';
 import {is} from '../utils/is';
+import type {Snapshot} from './model';
 
-export const TicTacToe = {
+export const TicTacToe: {
+    initial: Snapshot,
+    next: (Snapshot, number, number) => Snapshot
+} = {
     initial: {
         field: times(3, () => times(3, constant('empty'))),
         result: 'turn',
@@ -28,7 +33,7 @@ export const TicTacToe = {
         if (areAllCellsSelected(newField)) {
             return {
                 field: newField,
-                result: 'drown'
+                result: 'draw'
             };
         }
         return {
@@ -39,13 +44,17 @@ export const TicTacToe = {
     }
 };
 
-export const isNormalCell = ({winLine}) => {
-    return (row, column) =>
+export const isNormalCell = (snapshot: Snapshot) => {
+    if (snapshot.result !== 'win') {
+        return true;
+    }
+    const {winLine} = snapshot;
+    return (row: number, column: number) =>
         !some(winLine, {row, column});
 };
 
 function toss() {
-    return Math.random > 0.5 ? 'Х' : 'O';
+    return Math.random() > 0.5 ? 'X' : 'O';
 }
 
 function possibleSelection({field}, row, column) {

@@ -1,5 +1,7 @@
+// @flow
 import {find, times, every} from 'lodash';
 import {is} from '../utils/is';
+import type {Field} from './model';
 
 const LINES = [
     ...times(3, row => times(3, column => ({row, column}))),
@@ -14,4 +16,4 @@ const areAllCellsSelectedByOnePlayer = field =>
         return every(lineValues, is('X')) || every(lineValues, is('O'));
     };
 
-export const tryToFindWinLine = field => find(LINES, areAllCellsSelectedByOnePlayer(field));
+export const tryToFindWinLine = (field: Field) => find(LINES, areAllCellsSelectedByOnePlayer(field));
