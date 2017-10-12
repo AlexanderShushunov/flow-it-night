@@ -1,23 +1,35 @@
 // @flow
-export type Player = 'X'|'O'; // Union Type && Literal Type
+type Player = 'X'|'O';
 
 export type Token = 'X'|'O'|'empty';
 
-export type Row = Array<Token>; // Array Type. alt - Token[]
+export type Row = Array<Token>;
 
 export type Field = Array<Row>;
 
-export type Position = { // Object Type
+type Position = {
     row: number,
     column: number
 };
 
-export type Line = Array<Position>;
+type Line = Array<Position>;
 
-export type Snapshot = {
+type Turn = {
     field: Field,
-    result: 'turn'|'draw'|'win',
-    player?: Player,               // Optional property
-    winner?: Player,
-    winLine?: Line
+    player: Player,
+    result: 'turn'
 }
+
+type Draw = {
+    field: Field,
+    result: 'draw'
+}
+
+type Win = {
+    field: Field,
+    result: 'win',
+    winner: Player,
+    winLine: Line
+}
+
+export type Snapshot = Turn|Draw|Win
