@@ -46,7 +46,7 @@ export const TicTacToe: {
 
 export const isNormalCell = (snapshot: Snapshot) => {
     if (snapshot.result !== 'win') {
-        return true;
+        return (row: number, column: number) => true;
     }
     const {winLine} = snapshot;
     return (row: number, column: number) =>
