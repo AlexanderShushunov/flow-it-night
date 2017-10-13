@@ -1,3 +1,4 @@
+// @flow
 import {TicTacToe} from './tic-tac-toe';
 
 const EMPTY_FIELD = [
@@ -56,7 +57,7 @@ describe('TicTacToe.next', () => {
 
     test('should change a player, if the turn is correct', () => {
         expect(
-            TicTacToe.next(turnSnapshot, 1, 0).player
+            (TicTacToe.next(turnSnapshot, 1, 0): any).player // If type is wrong, test will fail. Perfect )
         ).toBe('O');
     });
 

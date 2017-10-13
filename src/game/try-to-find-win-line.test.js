@@ -1,3 +1,4 @@
+// @flow
 import './try-to-find-win-line';
 import {tryToFindWinLine} from './try-to-find-win-line';
 
