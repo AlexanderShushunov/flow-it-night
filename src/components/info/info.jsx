@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
 import './info.css';
+import type {Snapshot} from '../../game';
 
-export const Info = ({snapshot}) => (
+export const Info = ({snapshot}: {snapshot: Snapshot}) => (
     <div className="info">
         {formatState(snapshot)}
     </div>
@@ -12,7 +14,7 @@ function formatState(snapshot) {
         case 'draw':
             return 'Ничья';
         case 'win':
-            return formatWinner(snapshot.win);
+            return formatWinner(snapshot.winner);
         default:
             return `Ход ${snapshot.player}`;
     }
