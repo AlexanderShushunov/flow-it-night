@@ -1,7 +1,15 @@
+// @flow
 import React from 'react';
 import './cell.css';
+import type {Token} from '../../game';
 
-export const Cell = ({token, highlight, onClick}) => (
+type CellProps = {
+    token: Token,
+    highlight: boolean,
+    onClick: () => mixed
+}
+
+export const Cell = ({token, highlight, onClick}: CellProps) => (
     <div
         className={`cell ${tokenToClass(token)} ${highlightToClass(highlight)}`}
         onClick={onClick}

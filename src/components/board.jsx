@@ -1,7 +1,15 @@
+// @flow
 import React from 'react';
 import {Line} from './line';
+import type {Field} from '../game';
 
-export const Board = ({field, isWinCell, onCellClick}) => (
+type BoardProps = {
+    field: Field,
+    isWinCell: (number, number) => boolean,
+    onCellClick: (number, number) => mixed
+}
+
+export const Board = ({field, isWinCell, onCellClick}: BoardProps) => (
     <div>
         {field.map(
             (row, index) => (

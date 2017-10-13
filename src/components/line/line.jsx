@@ -1,8 +1,18 @@
+// @flow
 import React from 'react';
 import './line.css';
 import {Cell} from '../cell';
+import type {Row} from '../../game';
 
-export const Line = ({number, row, isWinCell, onCellClick}) => (
+type LineProps = {
+    number: number,
+    row: Row,
+    isWinCell: (number, number) => boolean,
+    onCellClick: (number, number) => mixed
+}
+
+
+export const Line = ({number, row, isWinCell, onCellClick}: LineProps) => (
     <div className="row">
         {row.map(
             (token, index) => (
