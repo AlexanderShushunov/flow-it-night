@@ -1,4 +1,4 @@
-# Репозиторий с материалами доклада ["Типзируй этo"](https://events.epam.com/events/nightit/talks/4493)
+# Репозиторий с материалами доклада ["Типизируй этo"](https://events.epam.com/events/nightit/talks/4493)
 ## Анонс
 Часто видите ошибку “itShouldBeAnArray.map is not a function”? 
 Автодополнение IDE дает список всех идентификаторов проекта?
