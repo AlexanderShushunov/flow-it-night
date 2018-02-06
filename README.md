@@ -32,6 +32,7 @@ https://www.youtube.com/watch?v=-DhimKUoXPA
 - Для тех, кто хочет глубже понять Flow, стоит посмотреть [вот это видео](https://www.youtube.com/watch?v=VEaDsKyDxkY)
 - Отличный доклад от Ильи Климова [«Строгий» JavaScript: типы против реальности](https://www.youtube.com/watch?time_continue=1&v=etKOc80-cw0)
 - [Исследование о том, что статическая типизация снижает количество ошибок](https://blog.acolyer.org/2017/09/19/to-type-or-not-to-type-quantifying-detectable-bugs-in-javascript) 
+- [Вводный курс по Flow от Javascript.Ninja](https://www.youtube.com/playlist?list=PLvTBThJr861zvILAjREUakZ6E5l7h7lsZ)
 
 
 ### Проверки в runtime
